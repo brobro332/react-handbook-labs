@@ -2,7 +2,8 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import React from "react";
-import StateBasic from "./components/StateBasic";
+import books from "./components/04. control-flow/books";
+import ForSort from "./components/04. control-flow/ForSort";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -80,7 +81,11 @@ root.render(
   <React.StrictMode>
     {/* <MyHello myName="홍길동" /> */}
     {/* <EventBasic type="time" /> */}
-    <StateBasic init={0} />
+    {/* <StateBasic init={0} /> */}
+    {/* <ForList src={books} /> */}
+    {/* <ForNest src={books} /> */}
+    {/* <ForFilter src={books} /> */}
+    <ForSort src={books} />
   </React.StrictMode>
 );
 
