@@ -2,6 +2,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import MyHello from "./components/MyHello";
+import EventBasic from "./components/EventBasic";
 import React from "react";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -78,7 +79,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
  */
 root.render(
   <React.StrictMode>
-    <MyHello myName="홍길동" />
+    {/* <MyHello myName="홍길동" /> */}
+    <EventBasic type="time" />
   </React.StrictMode>
 );
 
