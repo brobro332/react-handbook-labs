@@ -1,9 +1,8 @@
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
-import MyHello from "./components/MyHello";
-import EventBasic from "./components/EventBasic";
 import React from "react";
+import StateBasic from "./components/StateBasic";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -80,7 +79,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     {/* <MyHello myName="홍길동" /> */}
-    <EventBasic type="time" />
+    {/* <EventBasic type="time" /> */}
+    <StateBasic init={0} />
   </React.StrictMode>
 );
 
