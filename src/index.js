@@ -1,8 +1,10 @@
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import MyHello from "./components/MyHello";
+import React from "react";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
 /*
  * [앱 리렌더링]
@@ -40,40 +42,44 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
  * 11. JSX는 자바스크립트 자체가 아니라, 실행 시 자바스크립트 코드인
  *     React.createElement() 메서드로 변환되는 확장 구문이다.
  */
-const nickname = 'brobro332';
-const dest = 'https://ko.react.dev';
-
-root.render(
-  // 태그 밖에서 주석으로 사용할 수 있다.
-  /* 태그 밖에서 주석으로 사용할 수 있다. */
-  <>
-      {/* 태그 자식 요소에서 사용할 수 있는 주석이다. */}
-      <p>Hello, World !</p>
-      <p>Hello, React !</p>
-      <p>Hello, {nickname}</p>
-
-      {/* 실제 참조 */}
-      <div>{'Tom &amp; Jerry'}</div> 
-      <div>{'Tom \u0026 Jerry'}</div>                      {/* 이스케이프 시퀀스 */}
-      <div>{`Tom ${String.fromCodePoint(38)} Jerry`}</div> {/* 유니코드 포인트 */}
-
-      <ul>
-        <li>{true}</li>
-        <li>{false}</li>
-        <li>{undefined}</li>
-        <li>{null}</li>
-        <li>{0}</li> {/* 유일하게 렌더링 */}
-      </ul>
-
-      <a href={dest}>리액트 공식 홈페이지</a>
-  </>
-)
-
+// const nickname = 'brobro332';
+// const dest = 'https://ko.react.dev';
 
 // root.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>
-// );
+//   // 태그 밖에서 주석으로 사용할 수 있다.
+//   /* 태그 밖에서 주석으로 사용할 수 있다. */
+//   <>
+//       {/* 태그 자식 요소에서 사용할 수 있는 주석이다. */}
+//       <p>Hello, World !</p>
+//       <p>Hello, React !</p>
+//       <p>Hello, {nickname}</p>
+
+//       {/* 실제 참조 */}
+//       <div>{'Tom &amp; Jerry'}</div>
+//       <div>{'Tom \u0026 Jerry'}</div>                      {/* 이스케이프 시퀀스 */}
+//       <div>{`Tom ${String.fromCodePoint(38)} Jerry`}</div> {/* 유니코드 포인트 */}
+
+//       <ul>
+//         <li>{true}</li>
+//         <li>{false}</li>
+//         <li>{undefined}</li>
+//         <li>{null}</li>
+//         <li>{0}</li> {/* 유일하게 렌더링 */}
+//       </ul>
+
+//       <a href={dest}>리액트 공식 홈페이지</a>
+//   </>
+// )
+
+/*
+ * [props]
+ * 1. 큰 따옴표로 묶인 속성 값은 모두 문자열로 간주된다.
+ *    값을 숫자나 객체, 또는 함수로 전달하고 싶다면 { ... } 구문을 사용해야 한다.
+ */
+root.render(
+  <React.StrictMode>
+    <MyHello myName="홍길동" />
+  </React.StrictMode>
+);
 
 reportWebVitals();
